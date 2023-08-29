@@ -48,7 +48,7 @@ var questions = [
 
 
 var currentQuestionIndex = 0;
-
+var currentQ;
 
 // START SECTION
 var timeScore = 100;
@@ -66,7 +66,7 @@ quizSection.classList.remove("hide");
   
       if (timeScore === 0 ) {
         timerDisplay.textContent = timeScore
-        clearInterval(timeInterval);
+        gameOver();
         // displayMessage();
       }
   
@@ -107,13 +107,41 @@ quizSection.classList.remove("hide");
 //create a function to display the current question and choices
 
 function displayQuestion() {
-    var currentQ = questions[currentQuestionIndex];
+    currentQ = questions[currentQuestionIndex];
     questionElement.textContent = currentQ.question;
 
-
- 
+choicesElement.textContent = " ";
+ for (let i = 0; i < currentQ.choices.length; i++) {
+    const choice = currentQ.choices[i];
+    var li = document.createElement("li");
+    li.setAttribute("id",i);
+    li.textContent=choice;
+    li.addEventListener("click", answerSel);
+    choicesElement.append(li);
+ }
 }
 
+function answerSel(event) {
+    var userChoice = event.target.id;
+    console.log(userChoice);
+    //check if answer is correct -- > check user choice with correct (if statement)
+    if (userChoice != currentQ.correctAsnwer){
+        timeScore -= 15
+    };
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length && timeScore > 0) {
+        displayQuestion();  
+    } else {
+        gameOver();
+    }
+    
+}
+
+function gameOver() {
+    quizSection.classList.add("hide");
+    resultSection.classList.remove("hide"); 
+    clearInterval(timeInterval);
+}
 
 //add event listener for start button
 startButton.addEventListener("click", startQuiz);
