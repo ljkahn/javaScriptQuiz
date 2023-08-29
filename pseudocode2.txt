@@ -1,0 +1,67 @@
+Mod 4 Game plan: 
+Create Git repo: 
+    clone down to pc
+    create file structure   
+            assets-----------------style.css, logic.js
+            index.html
+            highscores.html
+            README.md
+            .gitignore 
+Project pieces: 
+    html structure
+    hooking up js and css files to html
+    HTML
+        link to highscores page from index- anchor tag
+        link to index from highscores
+        create 3 sections in your index.html file: 
+            1. start section
+                start button
+                    attach event listener
+                        *timer starts
+                        hide start section
+                        show quiz section
+                        display a question
+            2. quiz section
+            recommended data structure: 
+                var questions = [
+                    {
+                        title: 'first question',
+                        choices: ['red', 'green', 'blue', 'yellow'],
+                        answer: 'red' 
+                    },
+                    {
+                        title: 'second question',
+                        choices: ['red', 'green', 'blue', 'yellow'],
+                        answer: 'blue' 
+                    },
+                    {
+                        title: 'third question',
+                        choices: ['red', 'green', 'blue', 'yellow'],
+                        answer: 'green' 
+                    },
+                ]
+            build a displayQuestion function
+            attaching click events to each option in html
+            when clicked check if answer is right or wrong
+            if right - display next question
+            if wrong - decrement timer/score
+            timer/score <=0 
+                if 0 game ends
+            if last question 
+                    display results
+            else next question
+            3. results section
+                form OR an input with a button
+                    when button is clicked  
+                        grab score and initials and store them in local storage
+                        recommended data structure: 
+                            [
+                                {
+                                initials: 'jmm',
+                                score: 50
+                                },
+                            ]
+        show start section and hide other 2 sections
+        highscores.html
+            display all scores in desc order from local storage.
+            highscore.js

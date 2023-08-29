@@ -1,0 +1,30 @@
+creating a javascript quiz
+
+after getting HTML and css remotely set up??
+
+-- what is the first thing that needs to be accomplished
+
+organize HTML with sections for each part of the quiz
+1. start button and home page 
+2. questions
+3. results and score page
+
+need to create a title page with headers and a button that links to the questions
+
+
+create variables for the important parts of the quiz
+
+quizData --> an array that stores the quiz questions, choices, and correct answers
+currentQuestion --> variable used to track the current question being displayed
+score --> a variable to store the user's score
+
+
+what exactly are the objects inside of my array quizData???
+
+questions --> the question text itself
+choices --> array of multiple choice 
+correct?? --> true or false (BOOLEAN)
+
+FIRST QUESTIONS -->
+need to assign the question a list of choices
+need to have the answers be clickable

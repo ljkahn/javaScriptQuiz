@@ -3,17 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Javascript Quiz</title>
     <link rel="stylesheet" href="./assets/style.css" />
   </head>
   <body>
-    <h1>JavaScript Coding Quiz</h1>
-    <h2>
-      This is a quiz to test your JavaScript knowledge! please keep in mind that
-      if you answer incorrectly ___ amount of seconds will be taken off your
-      total time.
-    </h2>
-    <button>Start Quiz!</button>
+    <div id="start">
+      <a href="./highscores.html">high scores</a>
+      <h1>JavaScript Quiz</h1>
+      <h2>
+        This is a quiz to test your JavaScript knowledge! please keep in mind
+        that if you answer incorrectly ___ amount of seconds will be taken off
+        your total time.
+      </h2>
+      <button id="start-btn">Start Quiz!</button>
+    </div>
+    <div id="quiz" class="hide">
+      quiz!
+      <p id="timerDisplay"></p>
+      <div id="question"></div>
+      <div id="choices"></div>
+    </div>
+
+    <div id="result" class="hide">
+      <a href="./highscores.html">high scores</a>
+      results!
+      <button id="submit">submit</button>
+    </div>
+
     <script src="./assets/script.js"></script>
   </body>
 </html>
