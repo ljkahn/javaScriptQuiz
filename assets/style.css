@@ -1,5 +1,5 @@
 *{
-    background-color: antiquewhite;
+    background-color:white;
     cursor:auto;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -8,25 +8,43 @@ body,h1,p {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 3rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
 }
 
 p {
-    font-size: large;
+    font-size:larger;
 }
 
-
+.div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .hide {
 display: none;
 
 }
 
+.quiz {
+    display: flex;
+    flex-direction: column;
+}
+
+.question {
+    font-size: large;
+    color:black;
+    padding: 5px;
+    margin-top: 2rem;
+}
 
 
 .button {
-    background-color: #002c09;
+    background-color: #002839;
     border: none;
-    border-radius: 10%;
+    border-radius: 30%;
     color: white;
     padding: 20px 34px;
     text-align: center;

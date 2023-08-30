@@ -15,14 +15,14 @@
         that if you answer incorrectly ___ amount of seconds will be taken off
         your total time.
       </p>
-      <div>
-        <button class="button start" id="start-btn">Start Quiz!</button>
+      <div class="div">
+        <button class="button" id="start-btn">Start Quiz!</button>
       </div>
     </div>
-    <div id="quiz" class="hide">
+    <div id="quiz" class="hide question">
       <p id="timerDisplay"></p>
       <div id="question"></div>
-      <ul id="choices"></ul>
+      <ul class="quiz" id="choices"></ul>
     </div>
 
     <div id="result" class="hide">
@@ -38,10 +38,6 @@
     <div id="high-score-item" class="hide">
       <h2>Highscores</h2>
       <ol id="highscore-list"></ol>
-      <div class="inline-buttons">
-        <button id="back-button" class="button">Go Back</button>
-        <button id="clear-button" class="button">Clear Highscores</button>
-      </div>
     </div>
 
     <script src="./assets/script.js"></script>
