@@ -25,9 +25,22 @@
     </div>
 
     <div id="result" class="hide">
-      <a href="./highscores.html">high scores</a>
-      results!
-      <button id="submit">submit</button>
+      <h2>All done!</h2>
+      <p>Your final score is <span id="score"></span>.</p>
+      <form class="inline-form" id="submission-form">
+        <label for="initials">Enter initials: </label>
+        <input type="text" id="initials" />
+        <button id="submit-button" class="button">Submit</button>
+      </form>
+    </div>
+
+    <div id="leaderboard-card" class="hide">
+      <h2>Highscores</h2>
+      <ol id="highscore-list"></ol>
+      <div class="inline-buttons">
+        <button id="back-button" class="button">Go Back</button>
+        <button id="clear-button" class="button">Clear Highscores</button>
+      </div>
     </div>
 
     <script src="./assets/script.js"></script>

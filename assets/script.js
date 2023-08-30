@@ -4,10 +4,13 @@ var startButton = document.getElementById("start-btn");
 var timerDisplay = document.getElementById("timerDisplay");
 var questionElement = document.getElementById("question");
 var choicesElement = document.getElementById("choices");
-var submitButton = document.getElementById("submit");
 var startSection = document.getElementById("start");
 var quizSection = document.getElementById("quiz");
 var resultSection = document.getElementById("result");
+var initials = document.getElementById("initials");
+var submitButton = document.getElementById("#submit-button");
+var inputElement = document.getElementById("#initials");
+var score = document.getElementById("score");
 
 //define variables and objects for questions
 
@@ -18,32 +21,32 @@ var questions = [
     {
         question: "question 1",
         choices:["words", "words", "words", "words"],
-        correctAsnwer: 0
+        correctAnswer: 0
     },
 
     {
         question: "question 2",
         choices:["words", "words", "words", "words"],
-        correctAsnwer: 3
+        correctAnswer: 3
     },
 
-    // {
-    //     thirdQuestion: 
-    //     choices:["words", "words", "words", "words"],
-    //     correctAsnwer:
-    // },
+    {
+        question: "question 3",
+        choices:["words", "words", "words", "words"],
+        correctAnswer: 1
+    },
 
-    // {
-    //     fourthQuestion: 
-    //     choices:["words", "words", "words", "words"],
-    //     correctAsnwer:
-    // },
+    {
+        question: "question 4",
+        choices:["words", "words", "words", "words"],
+        correctAnswer:4
+    },
 
-    // {
-    //     fifthQuestion: 
-    //     choices:["words", "words", "words", "words"],
-    //     correctAsnwer:
-    // },
+    {
+        question: "question 5",
+        choices:["words", "words", "words", "words"],
+        correctAnswer:2
+    },
 ];
 
 
@@ -67,14 +70,14 @@ quizSection.classList.remove("hide");
       if (timeScore === 0 ) {
         timerDisplay.textContent = timeScore
         gameOver();
-        // displayMessage();
+      
       }
   
     },1000);
 
     displayQuestion();
   }
-//create a function that says times up
+//create a function that displays time
   function displayMessage () {
     var timeUp = 0
     var timeInt = setInterval(function() {
@@ -92,17 +95,6 @@ quizSection.classList.remove("hide");
 
 
 //QUIZ SECTION
-
-
-
-
-
-// //create a function to start the quiz
-// function startQuiz() {
-//     displayQuestion();
-
-// }
-
 
 //create a function to display the current question and choices
 
@@ -125,8 +117,9 @@ function answerSel(event) {
     var userChoice = event.target.id;
     console.log(userChoice);
     //check if answer is correct -- > check user choice with correct (if statement)
-    if (userChoice != currentQ.correctAsnwer){
+    if (userChoice != currentQ.correctAnswer){
         timeScore -= 15
+        alert("Try Again!");
     };
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length && timeScore > 0) {
@@ -137,14 +130,53 @@ function answerSel(event) {
     
 }
 
+var result = document.getElementById("result");
+
 function gameOver() {
     quizSection.classList.add("hide");
     resultSection.classList.remove("hide"); 
     clearInterval(timeInterval);
+    score.textContent = timeScore;
+   
+
 }
+
+
+
+
+//store score information in results page and sort them in descending order
+
+function storeScore(event) {
+  //prevent default behaviour of form submission
+  event.preventDefault();
+
+  //check for input
+  if (!inputElement.value) {
+    alert("Please enter your initials before pressing submit!");
+    return;
+  }
+
+  //store score and initials in an object
+  var highScoreItem = {
+    initials: inputElement.value,
+    score: time,
+  };
+}
+
+
+updateScore(highScoreItem);
+
+//hide the question card, display the leaderboardcard
+hideResult();
+highScoreItem.remove("hidden");
+
+renderLeaderboard();
 
 //add event listener for start button
 startButton.addEventListener("click", startQuiz);
+
+//store user initials and score when submit button is clicked
+submitButton.addEventListener("click", storeScore);
 
 
 //store score in local storage and present it back into another form -->
