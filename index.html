@@ -10,15 +10,16 @@
     <div id="start">
       <a href="./highscores.html">high scores</a>
       <h1>JavaScript Quiz</h1>
-      <h2>
+      <p>
         This is a quiz to test your JavaScript knowledge! please keep in mind
         that if you answer incorrectly ___ amount of seconds will be taken off
         your total time.
-      </h2>
-      <button id="start-btn">Start Quiz!</button>
+      </p>
+      <div>
+        <button class="button start" id="start-btn">Start Quiz!</button>
+      </div>
     </div>
     <div id="quiz" class="hide">
-      quiz!
       <p id="timerDisplay"></p>
       <div id="question"></div>
       <ul id="choices"></ul>
@@ -34,7 +35,7 @@
       </form>
     </div>
 
-    <div id="leaderboard-card" class="hide">
+    <div id="high-score-item" class="hide">
       <h2>Highscores</h2>
       <ol id="highscore-list"></ol>
       <div class="inline-buttons">
