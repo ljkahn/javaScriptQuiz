@@ -6,9 +6,9 @@ This is a fun quiz to test your basic knowledge of Javascript! It contains multi
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+When the quiz opens you will click the start button.
+When answering the questions - if you get one wrong, a 15 second penalty will be enforced.
+If the timer gets down to zero OR you finish the quiz, you will be intructed to put your initials in and then you can see your high scores.
 
 [alt text](./assets/images/Screenshot%202023-08-31%20at%202.29.45%20PM.png)
 [alt text](./assets/images/Screenshot%202023-08-31%20at%202.29.52%20PM.png)
