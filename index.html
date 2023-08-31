@@ -8,9 +8,8 @@
   </head>
   <body>
     <div id="start">
-      <a href="./highscores.html">high scores</a>
       <h1>JavaScript Quiz</h1>
-      <p>
+      <p class="p">
         This is a quiz to test your JavaScript knowledge! please keep in mind
         that if you answer incorrectly ___ amount of seconds will be taken off
         your total time.
@@ -20,16 +19,16 @@
       </div>
     </div>
     <div id="quiz" class="hide question">
-      <p id="timerDisplay"></p>
+      <p class="timer" id="timerDisplay"></p>
       <div id="question"></div>
-      <ul class="quiz" id="choices"></ul>
+      <ul class="quiz choices" id="choices"></ul>
     </div>
 
     <div id="result" class="hide">
       <h2>All done!</h2>
       <p>Your final score is <span id="score"></span>.</p>
-      <form class="inline-form" id="submission-form">
-        <label for="initials">Enter initials: </label>
+      <form class="inline-form scores" id="submission-form">
+        <label for="initials">Enter Initials: </label>
         <input type="text" id="initials" />
         <button id="submit-button" class="button">Submit</button>
       </form>
