@@ -12,6 +12,14 @@ body,h1,h2,p {
     margin-right: 6rem;
 }
 
+
+.start {
+    margin-top: 7rem;
+    border: solid #ffabce 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
 .p {
     font-size:larger;
 }
@@ -53,7 +61,7 @@ display: none;
 }
 
 .button {
-    background-color: #002839;
+    background-color: #510c29;
     border: none;
     border-radius: 15%;
     color: white;
@@ -61,7 +69,7 @@ display: none;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 15px;
+    font-size: 20px;
     margin: 1px 2px;
     cursor: pointer;
     width: 30%;
