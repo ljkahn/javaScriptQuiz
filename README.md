@@ -15,6 +15,9 @@ If the timer gets down to zero OR you finish the quiz, you will be intructed to 
 [alt text](./assets/images/Screenshot%202023-08-31%20at%202.32.37%20PM.png)
 [alt text](./assets/images/Screenshot%202023-08-31%20at%202.32.50%20PM.png)
 
+Deployed Website:
+https://ljkahn.github.io/javaScriptQuiz/
+
 ## Credits
 
 I received assistance from my TA, Justin Moore, with the code.
